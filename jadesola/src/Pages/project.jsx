@@ -62,7 +62,7 @@ const projects = [
 function Project() {
   return (
     <section className="projects">
-        <section id="project"> ... </section>
+        <section id="project"></section>
       <div className="container">
         <div className="text-center">
           <h2>Featured Projects</h2>

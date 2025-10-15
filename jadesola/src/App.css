@@ -28,97 +28,125 @@
   }
 
 .navbar {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  transition: background-color 0.3s ease;
+  position: fixed;
+   z-index: 1000;
+  background-color: var(--secondary-color); 
+  box-shadow: 0px 10px 15px  rgba(0, 0, 0, 0.1); 
+  padding: 30px 70px;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav-links {
+.navbar .nav-name {
+  font-size: 30px; 
+  color: rgb(116, 70, 70); 
+  letter-spacing: 1px;
+}
+.navbar .nav-name:hover {
+  color: rgb(100, 60, 60);
+}
+.navbar-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
-.nav-links a {
-  text-decoration: none;
+.nav-item .nav-link {
+  color: #222;
+  font-size: 17px;
   font-weight: 500;
-  color: #111618;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #13a4ec;
+.nav-item .nav-link:hover {
+  color: rgb(116, 70, 70);
 }
 
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
+.navbar-toggler {
+  border: none;
 }
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .l-h1{
   font-size: 30px;
 }  
- .pg-1 h1 {
-    font-size: 56px;
-    line-height: 1.5;
-    text-align: left;
-  }
- .pg-1 h4{
-    font-size: 48px;
-  }
-  .pg-1 h2 {
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 30px;
-    padding-top: 50px;
-    text-align: left;
-  }
-  .pg-1 p{
-    font-size: 15px;
-    font-weight: 500;
-    text-align: left;
-    margin-top: 10px;
-  
-  }
-  .hire-btn{
-    padding: 10px 25px;
-    background-color: rgb(116, 70, 70);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    margin-right:78%;
-  font-weight: 500;
-  }
-  .hire-btn:hover{
-    background-color: #fff;
-    color:rgb(116, 70, 70) ;
-    border:2px solid  rgb(116, 70, 70);
-  }
-  .pg-1 {
+ .pg-1 {
   background: var(--secondary-color);
   text-align: center;
   padding: 100px;
-  min-height: 100vh;
+  min-height: auto;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-  .jay-img {
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  text-align: left;
+}
+
+.home-img {
+  flex: 1;
+  text-align: center;
+}
+
+.pg-1 h1 {
+  font-size: 56px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.pg-1 h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 30px;
+  padding-top: 50px;
+  text-align: left;
+}
+
+.pg-1 p {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.hire-btn {
+  padding: 10px 25px;
+  background-color: rgb(116, 70, 70);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hire-btn:hover {
+  background-color: #fff;
+  color: rgb(116, 70, 70);
+  border: 2px solid rgb(116, 70, 70);
+}
+
+.jay-img {
   width: 400px;
   height: 400px;
   object-fit: contain;
-  background: none;       
-  border: none;           
-  box-shadow: none;  
+  background: none;
+  border: none;
+  box-shadow: none;
   outline: none;
   display: block;
   margin: 0 auto;
 }
-
   
 .about-section {
   display: flex;
@@ -249,7 +277,7 @@
 }
 
 .btn.dark {
-  background-color: #13a4ec;
+  background-color: rgb(150, 89, 89);;
   color: white;
 }
 
@@ -428,233 +456,119 @@
 }
 
 @media (max-width: 768px) {
-  .logo {
-    max-width: 80px;
-    padding-left: 5%;
+ .navbar {
+    padding: 8px 15px;
+    position: fixed;
+    z-index: 1000;
   }
-
+  .navbar .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    }
   .navbar-nav {
-    text-align: center;
-    width: 100%;
+    gap: 15px;
   }
-
-  .navbar-nav .nav-item {
-    margin-bottom: 10px;
-  }
-
-
-  h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 16px;
-    padding-top: 20px;
-  }
-
-  .pg-1 {
-    padding: 30px 10px;
-    text-align: center;
-  }
-
-  .jay-img {
-    width: 90%;
-    height: auto;
-    max-width: 250px;
-  }
-
-  .social-links {
-    align-items: center;
-  }
-
-  .social-links a {
-    font-size: 16px;
-    margin: 0 10px;
-    color: var(--branding-color);
-    background-color: #b3b0bf;
-    padding: 10px 15px;
-    border-radius: 80%;
-    font-size: 18px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .col {
-    width: 100%;
-  }
-  .aboutSection {
-    padding: 20px; 
-  }
-  
-  .aboutSection h2 {
-    font-size: 35px;
-  }
-
-  .aboutSection h3 {
+  .navbar .nav-name {
     font-size: 30px;
   }
-
-  .aboutSection h4 {
-    font-size: 25px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .col {
-    width: 100%;
-  }
-  .progress {
-    height: 5px;
-    width: 90%;
-  }
-
-  .p-p {
-    font-size: 15px;
-    margin-top: -5px;
-  }
-  .p-1{
-    font-size: 15px;
-  }
-  .contact {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: -10px;
+  .nav-item .nav-link {
+    font-size: 18px;
   } 
-  .services-section {
-    padding: 20px 0;
+    .pg-1 {
+    padding: 40px 15px; 
+    min-height: auto;   
   }
-  .service-card {
-    width: 100%;
+  .pg-1 h1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .pg-1 h2 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+  .pg-1 p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .jay-img {
+    width: 250px;
     height: auto;
-    padding: 20px;
+    margin: 0 auto ;
+    padding-top: 100px;
+  }
+  .hire-btn {
+    margin: 5px auto;
+    font-size: 18px; 
+  }
+  .home-content {
+    flex-direction: column-reverse; 
   }
 
-  .service-icon {
-    font-size: 24px; 
+ about-section {
+    flex-direction: column; 
+     align-items: center;
+    padding: 30px 15px;
   }
-  .service-h4 {
-    font-size: 14px;
+  .about-text {
+    order: -1; 
+    max-width: 100%;
+    margin-bottom: 20px;
   }
-
-  .service-p,
-  .service-list li {
-    font-size: 12px;
+  .about-text h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
   }
-  .services-section .row {
-    flex-direction: column;
-    align-items: center;
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.6;
   }
-  .section-title {
-    font-size: 16px;
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+     gap: 15px;
+    justify-items: center;
+    margin-top: 10px;
   }
-  .section-subtitle {
-    font-size: 22px;
-  }
-  .portfolio-section h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .portfolio-section h4 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-
-  .project-img .row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-img .col-md-6 {
+  .skill-card {
     width: 100%;
+    max-width: 100px; 
     padding: 10px;
   }
-  .project-img img {
-    width: 100%;
+  .skill-card img {
+    max-width: 50px;
     height: auto;
   }
-  .project-img img {
-    border-radius: 10px;
-    margin-bottom: 5px;
+  .skill-card p {
+    font-size: 15px;
+    font-weight: 500;
   }
 
-  .project-card {
-    position: relative;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .project-card img {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .project-card:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .project-card:hover .overlay {
-    opacity: 1;
-  }
-  .project-img h3 {
-    font-size: 14px;
-    margin-top: 3px;
-    margin-bottom: 1px;
-    
-  }
-  .project-img p {
-    font-size: 12px;
-  }
-  .frontend-project-section {
-    height: auto;
-    padding: 40px 20px;
-  }
-  .front-end-container {
-    width: 100%;
-  }
-  .front-end-container h2 {
-    font-size: 22px;
-  }
-  .front-end-container h3 {
-    font-size: 14px;
-  }
-  .front-end-container p {
-    font-size: 12px;
-  }
-  .front-end {
+   .footer-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-  .front-end-card {
-    width: 90%;
-    max-width: 320px;
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+  .footer-icons {
+    justify-content: center;
+  }
+  .footer-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+  .footer-heading {
+    font-size: 20px;
+  }
+  .footer-text {
+    font-size: 16px;
+  }
+  .footer-copy {
+    font-size: 14px;
   }
 }

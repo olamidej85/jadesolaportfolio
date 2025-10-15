@@ -4,7 +4,7 @@ import "../App.css";
 function About() {
   return (
     <div className="about-section">
-      <section id="about"> ... </section>
+      <section id="about"></section>
       <div className="skills-container">
         <div className="skill-card">
           <img src="images/html.webp" alt="HTML" />

@@ -1,68 +1,53 @@
 import React from "react";
 
 function NavBar() {
-  
-  const handleScroll = (e, targetId) => {
-    e.preventDefault();
-    const target = document.getElementById(targetId);
-    if (target) {
-      const offset = 70;
-      const topPosition = target.offsetTop - offset;
-      window.scrollTo({ top: topPosition, behavior: "smooth" });
-    }
-  };
-
   return (
-    <header className="navbar fixed-top bg-light shadow-sm">
-      <div className="container d-flex align-items-center justify-content-between py-2">
-      
-        <h1 className="m-0 fw-bold l-h1">Jadesola</h1>
+    <nav className="navbar navbar-expand-lg navbar-light  fixed-top">
+      <div className="container-fluid">
+        <a className=" nav-name navbar-brand fw-bold" href="#home">
+          Jadesola
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        
-        <nav className="d-flex align-items-center gap-4">
-          <a
-            href="#home"
-            className="nav-link"
-            onClick={(e) => handleScroll(e, "home")}
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="nav-link"
-            onClick={(e) => handleScroll(e, "about")}
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="nav-link"
-            onClick={(e) => handleScroll(e, "projects")}
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="nav-link"
-            onClick={(e) => handleScroll(e, "contact")}
-          >
-            Contact
-          </a>
+  
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav align-items-center">
+            <li className="nav-item">
+              <a className="nav-link active" href="#home">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#about">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#project">
+                Projects
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contact">
+                Contact
+              </a>
+            </li>
 
-          <div
-            className="profile-pic"
-            style={{
-              backgroundImage: "url('/images/jayde.jpeg')",
-              width: "40px",
-              height: "40px",
-              borderRadius: "50%",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
-        </nav>
+            
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
 
