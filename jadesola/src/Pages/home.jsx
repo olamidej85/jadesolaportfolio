@@ -18,7 +18,7 @@ function Home() {
               establish a strong online presence.
             </p>
             <a href="/jadesola cv.pdf" target="_blank" rel="noopener noreferrer">
-              <button className="hire-btn">Hire Me</button>
+              <button className="hire-btn">MY CV </button>
             </a>
           </div>
 
